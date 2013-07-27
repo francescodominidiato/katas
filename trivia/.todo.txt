@@ -1,0 +1,7 @@
+# functional 
+
+
+
+- sostituire array palces con oggetti
+
+# non functional 
