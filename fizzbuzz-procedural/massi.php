@@ -16,10 +16,6 @@ function fizzbuz($number)
     return ($output != "") ? $output : $number;
 }
 
-
-
-
-
 function test() 
 {
     assertEquals(2, 2);
@@ -51,8 +47,6 @@ function assertEquals($given, $expected)
         echo PHP_EOL . "ERROR: given {$given}, expected {$expected}, output {$output}" . PHP_EOL;
     }
 }
-
-
 
 function app()
 {
