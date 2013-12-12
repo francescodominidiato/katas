@@ -1,0 +1,10 @@
+<phpunit
+  bootstrap="bootstrap.php"
+  colors="true"
+  verbose="true">
+  <testsuites>
+    <testsuite name="Game of Life">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>
