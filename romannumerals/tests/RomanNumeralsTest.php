@@ -7,26 +7,22 @@ class RomanNumeralsTest extends PHPUnit_Framework_TestCase
         $this->translator = new RomanNumeralsTranslator();
     }
 
-    public function test1IsConvertedToI()
+    public function numberTranslations()
     {
-        $this->assertEquals('I', $this->translator->fromArabic(1));
+        return [
+            [1, 'I'],
+            [2, 'II'],
+            [3, 'III'],
+            [4, 'IV'],
+            [5, 'V'],
+        ];
     }
-    
-    public function test2IsConvertedToII()
-    {
-        $this->assertEquals('II', $this->translator->fromArabic(2));
-    }
-    
-    public function test3IsConvertedToIII()
-    {
-        $this->assertEquals('III', $this->translator->fromArabic(3));
-    }
-    
-    public function test4IsConvertedToIV()
-    {
-        $this->assertEquals('IV', $this->translator->fromArabic(4));
-    }
-    
-    
 
+    /**
+     * @dataProvider numberTranslations
+     */
+    public function testArabicIsConvertedToRoman($arabic, $roman)
+    {
+        $this->assertEquals($roman, $this->translator->fromArabic($arabic));
+    }
 }
